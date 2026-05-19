@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
 import Button from '@/components/ui/Button'
@@ -10,6 +11,16 @@ export const metadata: Metadata = {
   title: 'About Us',
   description:
     'Walk-in veterinary care in Tustin, serving Orange County families. Doctor owned and operated, with modern medicine, individualized care, and a focus on quality of life.',
+  openGraph: {
+    images: [
+      {
+        url: '/team-photo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'The team at Tustin Village Animal Hospital',
+      },
+    ],
+  },
 }
 
 export const revalidate = 3600
@@ -93,6 +104,29 @@ export default async function AboutPage() {
         </Container>
       </section>
 
+      <section className="py-12 md:py-16">
+        <Container>
+          <Reveal>
+            <div className="mx-auto max-w-5xl">
+              <div className="overflow-hidden rounded-2xl bg-[var(--color-surface)]">
+                <Image
+                  src="/team-photo.jpg"
+                  alt="The team at Tustin Village Animal Hospital"
+                  width={1440}
+                  height={1442}
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  className="h-auto w-full"
+                  priority={false}
+                />
+              </div>
+              <p className="mt-4 text-center text-sm italic text-[var(--color-muted)]">
+                The team at Tustin Village Animal Hospital.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
       <section className="bg-[var(--color-surface)] py-20">
         <Container width="narrow">
           <Reveal>
@@ -157,7 +191,7 @@ export default async function AboutPage() {
                 Same-day appointments available for routine and urgent care, six days a week.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href={bookingUrl} variant="primary" openInNewTab>
+                <Button href={bookingUrl} variant="onDark" openInNewTab>
                   Book an appointment
                 </Button>
                 {settings?.phone && (

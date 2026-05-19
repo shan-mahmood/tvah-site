@@ -1,0 +1,202 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e8]: 13942 Newport Ave, Tustin, CA 92780
+    - link "(714) 909-1338" [ref=e9] [cursor=pointer]:
+      - /url: tel:7149091338
+      - img [ref=e10]
+      - generic [ref=e12]: (714) 909-1338
+  - banner [ref=e13]:
+    - generic [ref=e14]:
+      - link "Tustin Village Animal Hospital" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e16]: Tustin Village
+        - generic [ref=e17]: Animal Hospital
+      - navigation [ref=e18]:
+        - link "Home" [ref=e19] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e20] [cursor=pointer]:
+          - /url: /about-us
+        - link "Our Services" [ref=e21] [cursor=pointer]:
+          - /url: /our-services
+        - link "Patient Center" [ref=e22] [cursor=pointer]:
+          - /url: /patient-center
+        - link "Contact Us" [ref=e23] [cursor=pointer]:
+          - /url: /contact-us
+      - link "Appointment" [ref=e24] [cursor=pointer]:
+        - /url: https://tvill.usw2.ezyvet.com/external/portal/main/login?id=2
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - text: 50% off first exams on weekdays — new clients welcome.
+      - link "Call (714) 909-1338 →" [ref=e27] [cursor=pointer]:
+        - /url: tel:7149091338
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - paragraph [ref=e33]: Trusted veterinarian in Tustin
+        - heading "Care for your pets like family." [level=1] [ref=e35]
+        - paragraph [ref=e37]: Walk in anytime or schedule ahead for modern veterinary care. We see same-day walk-ins for routine, urgent, and emergency visits — six days a week.
+        - generic [ref=e39]:
+          - link "Book an appointment" [ref=e40] [cursor=pointer]:
+            - /url: https://tvill.usw2.ezyvet.com/external/portal/main/login?id=2
+          - link "Call (714) 909-1338" [ref=e41] [cursor=pointer]:
+            - /url: tel:7149091338
+        - generic "Customer ratings" [ref=e43]:
+          - link "4.9 on Google · 138 reviews" [ref=e45] [cursor=pointer]:
+            - /url: https://www.google.com/search?q=Tustin+Village+Animal+Hospital
+            - generic [ref=e46]: ★★★★★
+            - generic [ref=e47]: 4.9 on Google · 138 reviews
+          - link "4.9 on Yelp · 108 reviews" [ref=e49] [cursor=pointer]:
+            - /url: https://www.yelp.com/biz/tustin-village-animal-hospital-tustin
+            - generic [ref=e50]: ★★★★★
+            - generic [ref=e51]: 4.9 on Yelp · 108 reviews
+      - img "A tabby cat and a cream-colored dog cuddling together in golden-hour sunlight on grass" [ref=e54]
+    - generic [ref=e56]:
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: Services
+        - heading "Comprehensive care at every life stage" [level=2] [ref=e60]
+        - paragraph [ref=e61]: From wellness exams to emergency surgery, we provide a full spectrum of veterinary care for dogs and cats.
+      - generic [ref=e62]:
+        - link "Wellness Exams Comprehensive checkups that go beyond a basic exam — tailored to your pet's age, lifestyle, and health history. Learn more →" [ref=e64] [cursor=pointer]:
+          - /url: /wellness-exams
+          - heading "Wellness Exams" [level=3] [ref=e65]
+          - paragraph [ref=e66]: Comprehensive checkups that go beyond a basic exam — tailored to your pet's age, lifestyle, and health history.
+          - generic [ref=e67]: Learn more →
+        - link "Emergency Care Urgent care for trauma, severe illness, poisoning, seizures, and other life-threatening situations. Walk in — emergencies are prioritized. Learn more →" [ref=e69] [cursor=pointer]:
+          - /url: /emergency-care
+          - heading "Emergency Care" [level=3] [ref=e70]
+          - paragraph [ref=e71]: Urgent care for trauma, severe illness, poisoning, seizures, and other life-threatening situations. Walk in — emergencies are prioritized.
+          - generic [ref=e72]: Learn more →
+        - link "Dental Care Cleanings, extractions, gum disease treatment, and at-home care guidance. Bad breath is rarely just bad breath. Learn more →" [ref=e74] [cursor=pointer]:
+          - /url: /dental-care
+          - heading "Dental Care" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Cleanings, extractions, gum disease treatment, and at-home care guidance. Bad breath is rarely just bad breath.
+          - generic [ref=e77]: Learn more →
+      - link "See all services →" [ref=e79] [cursor=pointer]:
+        - /url: /our-services
+    - generic [ref=e82]:
+      - img "Calm orange tabby cat being examined" [ref=e85]
+      - generic [ref=e87]:
+        - paragraph [ref=e88]: About
+        - heading "Why Orange County families choose us" [level=2] [ref=e89]
+        - generic [ref=e90]:
+          - paragraph [ref=e91]: Tustin Village Animal Hospital is a doctor owned and operated walk-in veterinary clinic. Our team brings decades of combined experience to every visit, combining modern diagnostic technology with cost-effective, individualized care — six days a week, with or without an appointment.
+          - paragraph [ref=e92]: Rather than default to the most expensive solution, our veterinarians seek the most effective and appropriate one for your pet and your family.
+        - link "Meet our doctors" [ref=e94] [cursor=pointer]:
+          - /url: /our-doctors
+    - generic [ref=e96]:
+      - generic [ref=e98]:
+        - paragraph [ref=e99]: Our team
+        - heading "Veterinarians who take the time" [level=2] [ref=e100]
+        - paragraph [ref=e101]: Same caring doctors every visit. We build long-term relationships with our patients and their families.
+      - generic [ref=e102]:
+        - generic [ref=e104]:
+          - img "Dr. My Nguyen, DVM" [ref=e106]
+          - paragraph [ref=e107]:
+            - text: Dr. My Nguyen
+            - generic [ref=e108]: ", DVM"
+          - paragraph [ref=e109]: Owner and Chief Medical Director
+        - generic [ref=e111]:
+          - img "Dr. Katrina Larkin, DVM" [ref=e113]
+          - paragraph [ref=e114]:
+            - text: Dr. Katrina Larkin
+            - generic [ref=e115]: ", DVM"
+          - paragraph [ref=e116]: Associate Veterinarian
+        - generic [ref=e118]:
+          - img "Dr. Tina Madan, DVM" [ref=e120]
+          - paragraph [ref=e121]:
+            - text: Dr. Tina Madan
+            - generic [ref=e122]: ", DVM"
+          - paragraph [ref=e123]: Associate Veterinarian
+      - link "Meet the full team →" [ref=e125] [cursor=pointer]:
+        - /url: /our-doctors
+    - generic [ref=e129]:
+      - paragraph [ref=e130]: Ready when you are
+      - heading "Your pet's health is our priority." [level=2] [ref=e131]
+      - paragraph [ref=e132]: Walk in, call, or book online. We see same-day appointments for routine and urgent care.
+      - generic [ref=e133]:
+        - link "Book an appointment" [ref=e134] [cursor=pointer]:
+          - /url: https://tvill.usw2.ezyvet.com/external/portal/main/login?id=2
+        - link "Call (714) 909-1338" [ref=e135] [cursor=pointer]:
+          - /url: tel:7149091338
+  - contentinfo [ref=e136]:
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - link "Tustin Village Animal Hospital" [ref=e139] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e140]: Tustin Village
+          - generic [ref=e141]: Animal Hospital
+        - paragraph [ref=e142]: Walk-in veterinary care in Tustin. Wellness, surgery, dental, diagnostics, and emergency services — six days a week.
+        - link "13942 Newport Ave Tustin, CA 92780" [ref=e143] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/dR3JrvquXfktcm816
+          - text: 13942 Newport Ave
+          - text: Tustin, CA 92780
+        - link "(714) 909-1338" [ref=e145] [cursor=pointer]:
+          - /url: tel:7149091338
+      - generic [ref=e146]:
+        - paragraph [ref=e147]: Visit
+        - list [ref=e148]:
+          - listitem [ref=e149]:
+            - link "Home" [ref=e150] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e151]:
+            - link "About Us" [ref=e152] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e153]:
+            - link "Our Doctors" [ref=e154] [cursor=pointer]:
+              - /url: /our-doctors
+          - listitem [ref=e155]:
+            - link "New Puppy Info" [ref=e156] [cursor=pointer]:
+              - /url: /new-puppy-info
+          - listitem [ref=e157]:
+            - link "New Kitten Info" [ref=e158] [cursor=pointer]:
+              - /url: /new-kitten-info
+          - listitem [ref=e159]:
+            - link "Hospital Policies" [ref=e160] [cursor=pointer]:
+              - /url: /hospital-policies
+          - listitem [ref=e161]:
+            - link "Payment Information" [ref=e162] [cursor=pointer]:
+              - /url: /payment-options
+          - listitem [ref=e163]:
+            - link "Contact Us" [ref=e164] [cursor=pointer]:
+              - /url: /contact-us
+      - generic [ref=e165]:
+        - paragraph [ref=e166]: Our Services
+        - list [ref=e167]:
+          - listitem [ref=e168]:
+            - link "Wellness Exams" [ref=e169] [cursor=pointer]:
+              - /url: /wellness-exams
+          - listitem [ref=e170]:
+            - link "Internal Medicine" [ref=e171] [cursor=pointer]:
+              - /url: /internal-medicine
+          - listitem [ref=e172]:
+            - link "Diagnostics" [ref=e173] [cursor=pointer]:
+              - /url: /diagnostics
+          - listitem [ref=e174]:
+            - link "Veterinary Surgery" [ref=e175] [cursor=pointer]:
+              - /url: /veterinary-surgery
+          - listitem [ref=e176]:
+            - link "Dental Care" [ref=e177] [cursor=pointer]:
+              - /url: /dental-care
+          - listitem [ref=e178]:
+            - link "Palliative Care" [ref=e179] [cursor=pointer]:
+              - /url: /palliative-care
+          - listitem [ref=e180]:
+            - link "Emergency Care" [ref=e181] [cursor=pointer]:
+              - /url: /emergency-care
+          - listitem [ref=e182]:
+            - link "Pet Travel" [ref=e183] [cursor=pointer]:
+              - /url: /pet-travel
+          - listitem [ref=e184]:
+            - link "Telemedicine" [ref=e185] [cursor=pointer]:
+              - /url: /telemedicine
+      - iframe [ref=e188]
+    - generic [ref=e190]:
+      - paragraph [ref=e191]: © 2026 Tustin Village Animal Hospital.
+      - generic [ref=e192]:
+        - link "Hospital policies" [ref=e193] [cursor=pointer]:
+          - /url: /hospital-policies
+        - link "Payment" [ref=e194] [cursor=pointer]:
+          - /url: /payment-options
+        - link "Contact" [ref=e195] [cursor=pointer]:
+          - /url: /contact-us

@@ -151,5 +151,13 @@ export type SiteSettings = {
     yelp?: string
   }
   hours?: Array<{ day: string; isClosed?: boolean; opens?: string; closes?: string }>
+  reviews?: {
+    googleRating?: number
+    googleCount?: number
+    googleUrl?: string
+    yelpRating?: number
+    yelpCount?: number
+    yelpUrl?: string
+  }
   defaultSeo?: { title?: string; description?: string; ogImage?: SanityImage }
 }

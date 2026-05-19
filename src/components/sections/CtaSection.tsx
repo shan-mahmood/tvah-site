@@ -24,7 +24,7 @@ export default function CtaSection(props: CtaSectionType) {
             )}
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {primaryCta?.href && primaryCta.label && (
-                <Button href={primaryCta.href} variant="primary" openInNewTab={primaryCta.openInNewTab}>
+                <Button href={primaryCta.href} variant="onDark" openInNewTab={primaryCta.openInNewTab}>
                   {primaryCta.label}
                 </Button>
               )}

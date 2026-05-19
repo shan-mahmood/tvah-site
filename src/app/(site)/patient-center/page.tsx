@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
@@ -10,81 +11,65 @@ import type { SiteSettings } from '@/lib/types'
 export const metadata: Metadata = {
   title: 'Patient Center',
   description:
-    'New client information, forms, payment options, and policies for Tustin Village Animal Hospital.',
+    'New client information, forms, payment options, hospital policies, and puppy/kitten care guides for Tustin Village Animal Hospital.',
+  openGraph: {
+    images: [
+      {
+        url: '/images/patient-center-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'A man warmly embracing a happy golden retriever outdoors at sunset',
+      },
+    ],
+  },
 }
 
 export const revalidate = 3600
 
-const SECTIONS = [
-  {
-    title: 'New patients',
-    items: [
-      {
-        heading: 'What to bring',
-        body: 'Any prior medical records from a previous vet, vaccination history, and a list of current medications. If your pet is on a prescription diet, bring the brand and formula.',
-      },
-      {
-        heading: 'First visit',
-        body: 'Plan for 30–45 minutes. We do a full physical, review history, and put together a care plan together. First exams for new clients are 50% off on weekdays.',
-      },
-      {
-        heading: 'Anxious pets',
-        body: "If your dog or cat gets stressed at the vet, let us know when you book. We have low-stress handling techniques and can prescribe calming aids when it'll help.",
-      },
-    ],
-  },
-  {
-    title: 'Payment & estimates',
-    items: [
-      {
-        heading: 'What we accept',
-        body: 'All major credit cards, debit, cash, CareCredit, and Scratchpay. Payment is due at the time of service.',
-      },
-      {
-        heading: 'Estimates',
-        body: "For any procedure beyond a basic exam, we provide a written estimate before we begin. You'll know the cost range upfront, with explanation of what each line item covers.",
-      },
-      {
-        heading: 'Payment plans',
-        body: 'For larger procedures, CareCredit and Scratchpay offer no-interest financing for qualified applicants. We can help you apply at the clinic.',
-      },
-    ],
-  },
-  {
-    title: 'Prescriptions & refills',
-    items: [
-      {
-        heading: 'How to request a refill',
-        body: 'Call us at least 48 hours before you run out. For ongoing medications, we may need to see your pet for a rechecks before authorizing additional refills.',
-      },
-      {
-        heading: 'Online pharmacy',
-        body: 'We can fill prescriptions in-house or send them to your preferred online pharmacy. Heartworm and flea prevention often costs less through online pharmacies — we&rsquo;re happy to send the script.',
-      },
-    ],
-  },
-  {
-    title: 'Policies',
-    items: [
-      {
-        heading: 'Appointments & walk-ins',
-        body: 'We see same-day walk-ins. Scheduled appointments take priority, but we work walk-ins in throughout the day as our schedule allows. Wait times depend on the day; calling ahead helps.',
-      },
-      {
-        heading: 'Cancellations',
-        body: 'Please give 24 hours notice for cancellations or reschedules. Repeated no-shows may require a deposit for future bookings.',
-      },
-      {
-        heading: 'Medical records',
-        body: "We're happy to send your pet&rsquo;s records to another vet or specialist. Email or call us with the receiving practice&rsquo;s information.",
-      },
-    ],
-  },
-]
+type Card = {
+  title: string
+  href: string
+  description: string
+  external?: boolean
+}
 
 export default async function PatientCenterPage() {
   const settings = await client.fetch<SiteSettings | null>(siteSettingsQuery)
   const bookingUrl = settings?.bookingUrl || '#'
+
+  const cards: Card[] = [
+    {
+      title: 'Online booking',
+      href: bookingUrl,
+      description:
+        'Schedule a wellness exam, dental cleaning, or follow-up through our patient portal — anytime, day or night.',
+      external: true,
+    },
+    {
+      title: 'Payment information',
+      href: '/payment-options',
+      description:
+        'Accepted payment methods, pet insurance recommendations, and CareCredit financing for unexpected expenses.',
+    },
+    {
+      title: 'Hospital policies',
+      href: '/hospital-policies',
+      description:
+        'Appointments, cancellations, drop-offs, prescription requirements, and other procedural details.',
+    },
+    {
+      title: 'New puppy info',
+      href: '/new-puppy-info',
+      description:
+        'Vaccination schedules, parasite prevention, diet guidance, and spay/neuter timing for your new dog.',
+    },
+    {
+      title: 'New kitten info',
+      href: '/new-kitten-info',
+      description:
+        'Vaccinations, fecal exam guidance, feline-specific toxins to avoid, and spay/neuter timing for your new cat.',
+    },
+  ]
 
   return (
     <>
@@ -95,42 +80,69 @@ export default async function PatientCenterPage() {
               Patient center
             </p>
             <h1 className="mt-3 text-4xl md:text-6xl">
-              Everything you need to know before your visit.
+              Everything you need before your visit.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-[var(--color-muted)]">
-              Forms, policies, payment options, and answers to the questions we hear most often.
-              Anything we haven&rsquo;t covered &mdash; just ask.
+              Booking, policies, payment, and care guides &mdash; in one place. Anything we
+              haven&rsquo;t covered, just ask.
             </p>
           </Reveal>
         </Container>
       </section>
 
-      <section className="py-12">
-        <Container width="narrow">
-          <div className="space-y-16">
-            {SECTIONS.map((section, si) => (
-              <Reveal key={section.title} delay={si * 0.05}>
-                <div>
-                  <h2 className="mb-8 text-3xl md:text-4xl">{section.title}</h2>
-                  <dl className="space-y-6">
-                    {section.items.map((item, i) => (
-                      <div
-                        key={i}
-                        className="border-b border-[var(--color-line)] pb-6 last:border-b-0"
-                      >
-                        <dt className="font-semibold text-lg text-[var(--color-brand-700)]">
-                          {item.heading}
-                        </dt>
-                        <dd
-                          className="mt-3 leading-relaxed text-[var(--color-ink)]/85"
-                          dangerouslySetInnerHTML={{ __html: item.body }}
-                        />
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-              </Reveal>
-            ))}
+      <section className="pb-4">
+        <Container>
+          <Reveal>
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-[var(--color-surface)] md:aspect-[16/9]">
+              <Image
+                src="/images/patient-center-hero.jpg"
+                alt="A man warmly embracing a happy golden retriever outdoors at sunset"
+                fill
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <Container>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {cards.map((c, i) => {
+              const cardClass =
+                'group flex h-full flex-col rounded-2xl border border-[var(--color-line)] bg-white p-6 transition-colors duration-200 hover:border-[var(--color-brand-500)]'
+              const inner = (
+                <>
+                  <h2 className="text-xl text-[var(--color-brand-700)]">{c.title}</h2>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-muted)]">
+                    {c.description}
+                  </p>
+                  <span className="mt-5 text-sm font-medium text-[var(--color-brand-500)] transition-transform duration-200 group-hover:translate-x-1">
+                    {c.external ? 'Open portal' : 'Learn more'} &rarr;
+                  </span>
+                </>
+              )
+              return (
+                <Reveal key={c.title} delay={i * 0.04}>
+                  {c.external ? (
+                    <a
+                      href={c.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cardClass}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <Link href={c.href} className={cardClass}>
+                      {inner}
+                    </Link>
+                  )}
+                </Reveal>
+              )
+            })}
           </div>
         </Container>
       </section>
@@ -174,7 +186,7 @@ export default async function PatientCenterPage() {
                 New clients save 50% on first exams on weekdays.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href={bookingUrl} variant="primary" openInNewTab>
+                <Button href={bookingUrl} variant="onDark" openInNewTab>
                   Book an appointment
                 </Button>
               </div>

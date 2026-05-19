@@ -3,11 +3,13 @@ import type { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { client, draftClient } from '@/sanity/client'
 import { serviceBySlugQuery, allServiceSlugsQuery } from '@/sanity/queries'
+import { urlFor } from '@/sanity/image'
 import Container from '@/components/ui/Container'
 import SanityImage from '@/components/ui/SanityImage'
 import PortableText from '@/components/ui/PortableText'
 import Button from '@/components/ui/Button'
 import Reveal from '@/components/ui/Reveal'
+import FaqSchema from '@/components/seo/FaqSchema'
 import Link from 'next/link'
 
 type Service = {
@@ -36,9 +38,20 @@ export async function generateMetadata({
   const { slug } = await params
   const service = await client.fetch<Service | null>(serviceBySlugQuery, { slug })
   if (!service) return {}
+
+  const ogImageUrl = service.heroImage?.asset
+    ? urlFor(service.heroImage).width(1200).height(630).fit('crop').url()
+    : undefined
+  const ogAlt = service.heroImage?.alt || service.title
+
   return {
     title: service.seo?.title || service.title,
     description: service.seo?.description || service.shortDescription,
+    openGraph: ogImageUrl
+      ? {
+          images: [{ url: ogImageUrl, width: 1200, height: 630, alt: ogAlt }],
+        }
+      : undefined,
   }
 }
 
@@ -58,6 +71,7 @@ export default async function ServicePage({
 
   return (
     <>
+      <FaqSchema faqs={service.faqs} />
       <section className="pt-16 pb-12 md:pt-24 md:pb-20">
         <Container width="narrow">
           <Reveal>

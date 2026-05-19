@@ -50,6 +50,7 @@ export const siteSettingsQuery = groq`
     address,
     socials,
     hours[]{day, isClosed, opens, closes},
+    reviews,
     defaultSeo
   }
 `

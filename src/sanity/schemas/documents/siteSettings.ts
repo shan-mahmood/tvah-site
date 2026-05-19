@@ -16,7 +16,7 @@ export const siteSettings = defineType({
       name: 'phone',
       title: 'Phone number',
       type: 'string',
-      description: 'Format: (714) 909-1338',
+      description: 'Format: (714) 660-7710',
       validation: (r) => r.required(),
     }),
     defineField({
@@ -56,6 +56,21 @@ export const siteSettings = defineType({
         {name: 'facebook', type: 'url'},
         {name: 'google', title: 'Google Business profile', type: 'url'},
         {name: 'yelp', type: 'url'},
+      ],
+    }),
+    defineField({
+      name: 'reviews',
+      title: 'Review summary',
+      type: 'object',
+      description:
+        'Used in schema markup for search result stars, and in the homepage reviews bar.',
+      fields: [
+        {name: 'googleRating', title: 'Google rating', type: 'number', initialValue: 4.9},
+        {name: 'googleCount', title: 'Google review count', type: 'number', initialValue: 138},
+        {name: 'googleUrl', title: 'Google Business profile URL', type: 'url'},
+        {name: 'yelpRating', title: 'Yelp rating', type: 'number', initialValue: 4.9},
+        {name: 'yelpCount', title: 'Yelp review count', type: 'number', initialValue: 108},
+        {name: 'yelpUrl', title: 'Yelp page URL', type: 'url'},
       ],
     }),
     defineField({

@@ -9,7 +9,17 @@ import type { SiteSettings } from '@/lib/types'
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Visit Tustin Village Animal Hospital at 13942 Newport Ave, Tustin, CA 92780. Call (714) 909-1338 or book online for same-day appointments.',
+    'Visit Tustin Village Animal Hospital at 13942 Newport Ave, Tustin, CA 92780. Call (714) 660-7710 or book online for same-day appointments.',
+  openGraph: {
+    images: [
+      {
+        url: '/team-photo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'The team at Tustin Village Animal Hospital',
+      },
+    ],
+  },
 }
 
 export const revalidate = 3600

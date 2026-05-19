@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 
-type Variant = 'primary' | 'secondary' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'ghost' | 'onDark'
 
 const styles: Record<Variant, string> = {
   primary:
@@ -10,6 +10,8 @@ const styles: Record<Variant, string> = {
     'bg-transparent text-[var(--color-brand-500)] border border-[var(--color-brand-500)] hover:bg-[var(--color-brand-500)] hover:text-white focus-visible:outline-[var(--color-brand-500)]',
   ghost:
     'bg-transparent text-[var(--color-ink)] hover:text-[var(--color-brand-500)] focus-visible:outline-[var(--color-ink)]',
+  onDark:
+    'bg-[var(--color-cream)] text-[var(--color-brand-700)] hover:bg-white focus-visible:outline-white',
 }
 
 export default function Button({

@@ -26,6 +26,27 @@ export default function LocalBusinessSchema({
       closes: h.closes,
     }))
 
+  const reviews = settings.reviews
+  const googleCount = reviews?.googleCount ?? 0
+  const yelpCount = reviews?.yelpCount ?? 0
+  const totalCount = googleCount + yelpCount
+  const weightedRating =
+    totalCount > 0
+      ? ((reviews?.googleRating ?? 0) * googleCount +
+          (reviews?.yelpRating ?? 0) * yelpCount) /
+        totalCount
+      : null
+
+  const aggregateRating = weightedRating
+    ? {
+        '@type': 'AggregateRating',
+        ratingValue: weightedRating.toFixed(1),
+        reviewCount: totalCount,
+        bestRating: 5,
+        worstRating: 1,
+      }
+    : undefined
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'VeterinaryCare',
@@ -44,6 +65,7 @@ export default function LocalBusinessSchema({
         }
       : undefined,
     openingHoursSpecification: openingHours,
+    aggregateRating,
     sameAs: settings.socials
       ? Object.values(settings.socials).filter(Boolean)
       : undefined,

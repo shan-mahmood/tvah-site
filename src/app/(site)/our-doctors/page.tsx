@@ -17,6 +17,16 @@ export const metadata: Metadata = {
   title: 'Our Doctors',
   description:
     'Meet the veterinarians at Tustin Village Animal Hospital. Our doctor owned and operated practice brings decades of combined experience to every visit.',
+  openGraph: {
+    images: [
+      {
+        url: '/team-photo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'The veterinary team at Tustin Village Animal Hospital',
+      },
+    ],
+  },
 }
 
 export const revalidate = 3600
@@ -53,20 +63,26 @@ export default async function DoctorsPage() {
               const imageSide = i % 2 === 0 ? 'left' : 'right'
               return (
                 <Reveal key={d._id} delay={i * 0.05}>
-                  <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[260px_1fr] md:gap-12 lg:grid-cols-[300px_1fr] lg:gap-16">
+                  <div
+                    className={`grid grid-cols-1 items-start gap-10 md:gap-12 lg:gap-16 ${
+                      imageSide === 'right'
+                        ? 'md:grid-cols-[1fr_260px] lg:grid-cols-[1fr_300px]'
+                        : 'md:grid-cols-[260px_1fr] lg:grid-cols-[300px_1fr]'
+                    }`}
+                  >
                     {d.photo && (
-                      <div
-                        className={`relative mx-auto aspect-[3/4] w-full max-w-[260px] overflow-hidden rounded-2xl bg-[var(--color-surface)] md:mx-0 lg:max-w-[300px] ${imageSide === 'right' ? 'md:order-2' : ''}`}
-                      >
-                        <SanityImage
-                          image={d.photo as SanityImageType}
-                          fill
-                          sizes="(max-width: 768px) 260px, 300px"
-                          className="object-cover"
-                        />
+                      <div className={imageSide === 'right' ? 'md:order-2' : ''}>
+                        <div className="relative mx-auto aspect-[3/4] w-full max-w-[260px] overflow-hidden rounded-2xl bg-[var(--color-surface)] md:mx-0 lg:max-w-[300px]">
+                          <SanityImage
+                            image={d.photo as SanityImageType}
+                            fill
+                            sizes="(max-width: 768px) 260px, 300px"
+                            className="object-cover"
+                          />
+                        </div>
                       </div>
                     )}
-                    <div>
+                    <div className="min-w-0">
                       <h2 className="text-3xl md:text-4xl">
                         {d.name}
                         {d.credentials && (
@@ -119,7 +135,7 @@ export default async function DoctorsPage() {
                 Book online or walk in &mdash; new clients get 50% off first exams on weekdays.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href={bookingUrl} variant="primary" openInNewTab>
+                <Button href={bookingUrl} variant="onDark" openInNewTab>
                   Book an appointment
                 </Button>
                 {settings?.phone && (

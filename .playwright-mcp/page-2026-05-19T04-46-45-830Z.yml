@@ -1,0 +1,173 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e8]: 13942 Newport Ave, Tustin, CA 92780
+    - link "(714) 909-1338" [ref=e9] [cursor=pointer]:
+      - /url: tel:7149091338
+      - img [ref=e10]
+      - generic [ref=e12]: (714) 909-1338
+  - banner [ref=e13]:
+    - generic [ref=e14]:
+      - link "Tustin Village Animal Hospital" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e16]: Tustin Village
+        - generic [ref=e17]: Animal Hospital
+      - navigation [ref=e18]:
+        - link "Home" [ref=e19] [cursor=pointer]:
+          - /url: /
+        - link "About Us" [ref=e20] [cursor=pointer]:
+          - /url: /about-us
+        - link "Our Services" [ref=e21] [cursor=pointer]:
+          - /url: /our-services
+        - link "Patient Center" [ref=e22] [cursor=pointer]:
+          - /url: /patient-center
+        - link "Contact Us" [ref=e23] [cursor=pointer]:
+          - /url: /contact-us
+      - link "Appointment" [ref=e24] [cursor=pointer]:
+        - /url: https://tvill.usw2.ezyvet.com/external/portal/main/login?id=2
+  - main [ref=e25]:
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Our services
+      - heading "Full-spectrum care for dogs and cats." [level=1] [ref=e30]
+      - paragraph [ref=e31]: From wellness exams to emergency surgery, we provide comprehensive veterinary care in-house — with modern diagnostics, experienced doctors, and same-day walk-ins when you need them.
+    - img "A woman gently hugging a brown and white spotted puppy outdoors in a garden" [ref=e36]
+    - generic [ref=e39]:
+      - link "Wellness Exams Comprehensive checkups that go beyond a basic exam — tailored to your pet's age, lifestyle, and health history. Learn more →" [ref=e41] [cursor=pointer]:
+        - /url: /wellness-exams
+        - heading "Wellness Exams" [level=2] [ref=e42]
+        - paragraph [ref=e43]: Comprehensive checkups that go beyond a basic exam — tailored to your pet's age, lifestyle, and health history.
+        - generic [ref=e44]: Learn more →
+      - link "Internal Medicine Diagnosis and management of complex medical conditions — endocrine, gastrointestinal, respiratory, kidney, liver, infectious, and immune-mediated. Learn more →" [ref=e46] [cursor=pointer]:
+        - /url: /internal-medicine
+        - heading "Internal Medicine" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Diagnosis and management of complex medical conditions — endocrine, gastrointestinal, respiratory, kidney, liver, infectious, and immune-mediated.
+        - generic [ref=e49]: Learn more →
+      - link "Veterinary Surgery A full range of surgical services — from spay and neuter to soft tissue, orthopedic, dental, and emergency procedures. Learn more →" [ref=e51] [cursor=pointer]:
+        - /url: /veterinary-surgery
+        - heading "Veterinary Surgery" [level=2] [ref=e52]
+        - paragraph [ref=e53]: A full range of surgical services — from spay and neuter to soft tissue, orthopedic, dental, and emergency procedures.
+        - generic [ref=e54]: Learn more →
+      - link "Diagnostics Digital X-ray, ultrasound, in-house bloodwork, urinalysis, and ECG. Fast, accurate answers so we can start treatment quickly. Learn more →" [ref=e56] [cursor=pointer]:
+        - /url: /diagnostics
+        - heading "Diagnostics" [level=2] [ref=e57]
+        - paragraph [ref=e58]: Digital X-ray, ultrasound, in-house bloodwork, urinalysis, and ECG. Fast, accurate answers so we can start treatment quickly.
+        - generic [ref=e59]: Learn more →
+      - link "Dental Care Cleanings, extractions, gum disease treatment, and at-home care guidance. Bad breath is rarely just bad breath. Learn more →" [ref=e61] [cursor=pointer]:
+        - /url: /dental-care
+        - heading "Dental Care" [level=2] [ref=e62]
+        - paragraph [ref=e63]: Cleanings, extractions, gum disease treatment, and at-home care guidance. Bad breath is rarely just bad breath.
+        - generic [ref=e64]: Learn more →
+      - link "Palliative Care Compassionate, comfort-focused care for pets with chronic illness or advanced age. Quality of life is the priority. Learn more →" [ref=e66] [cursor=pointer]:
+        - /url: /palliative-care
+        - heading "Palliative Care" [level=2] [ref=e67]
+        - paragraph [ref=e68]: Compassionate, comfort-focused care for pets with chronic illness or advanced age. Quality of life is the priority.
+        - generic [ref=e69]: Learn more →
+      - link "Pet Travel Health certificates, vaccinations, microchipping, and guidance for safe domestic and international pet travel. Learn more →" [ref=e71] [cursor=pointer]:
+        - /url: /pet-travel
+        - heading "Pet Travel" [level=2] [ref=e72]
+        - paragraph [ref=e73]: Health certificates, vaccinations, microchipping, and guidance for safe domestic and international pet travel.
+        - generic [ref=e74]: Learn more →
+      - link "Emergency Care Urgent care for trauma, severe illness, poisoning, seizures, and other life-threatening situations. Walk in — emergencies are prioritized. Learn more →" [ref=e76] [cursor=pointer]:
+        - /url: /emergency-care
+        - heading "Emergency Care" [level=2] [ref=e77]
+        - paragraph [ref=e78]: Urgent care for trauma, severe illness, poisoning, seizures, and other life-threatening situations. Walk in — emergencies are prioritized.
+        - generic [ref=e79]: Learn more →
+      - link "Telemedicine Virtual veterinary consultations for non-emergency concerns, follow-ups, and prescription refills. Existing patients only. Learn more →" [ref=e81] [cursor=pointer]:
+        - /url: /telemedicine
+        - heading "Telemedicine" [level=2] [ref=e82]
+        - paragraph [ref=e83]: Virtual veterinary consultations for non-emergency concerns, follow-ups, and prescription refills. Existing patients only.
+        - generic [ref=e84]: Learn more →
+    - generic [ref=e88]:
+      - heading "Not sure what you need? Just walk in." [level=2] [ref=e89]
+      - paragraph [ref=e90]: We triage every visit, recommend the right level of care, and never push services your pet doesn’t need.
+      - generic [ref=e91]:
+        - link "Book an appointment" [ref=e92] [cursor=pointer]:
+          - /url: https://tvill.usw2.ezyvet.com/external/portal/main/login?id=2
+        - link "Call (714) 909-1338" [ref=e93] [cursor=pointer]:
+          - /url: tel:7149091338
+  - contentinfo [ref=e94]:
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - link "Tustin Village Animal Hospital" [ref=e97] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e98]: Tustin Village
+          - generic [ref=e99]: Animal Hospital
+        - paragraph [ref=e100]: Walk-in veterinary care in Tustin. Wellness, surgery, dental, diagnostics, and emergency services — six days a week.
+        - link "13942 Newport Ave Tustin, CA 92780" [ref=e101] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/dR3JrvquXfktcm816
+          - text: 13942 Newport Ave
+          - text: Tustin, CA 92780
+        - link "(714) 909-1338" [ref=e103] [cursor=pointer]:
+          - /url: tel:7149091338
+      - generic [ref=e104]:
+        - paragraph [ref=e105]: Visit
+        - list [ref=e106]:
+          - listitem [ref=e107]:
+            - link "Home" [ref=e108] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e109]:
+            - link "About Us" [ref=e110] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e111]:
+            - link "Our Doctors" [ref=e112] [cursor=pointer]:
+              - /url: /our-doctors
+          - listitem [ref=e113]:
+            - link "New Puppy Info" [ref=e114] [cursor=pointer]:
+              - /url: /new-puppy-info
+          - listitem [ref=e115]:
+            - link "New Kitten Info" [ref=e116] [cursor=pointer]:
+              - /url: /new-kitten-info
+          - listitem [ref=e117]:
+            - link "Hospital Policies" [ref=e118] [cursor=pointer]:
+              - /url: /hospital-policies
+          - listitem [ref=e119]:
+            - link "Payment Information" [ref=e120] [cursor=pointer]:
+              - /url: /payment-options
+          - listitem [ref=e121]:
+            - link "Contact Us" [ref=e122] [cursor=pointer]:
+              - /url: /contact-us
+      - generic [ref=e123]:
+        - paragraph [ref=e124]: Our Services
+        - list [ref=e125]:
+          - listitem [ref=e126]:
+            - link "Wellness Exams" [ref=e127] [cursor=pointer]:
+              - /url: /wellness-exams
+          - listitem [ref=e128]:
+            - link "Internal Medicine" [ref=e129] [cursor=pointer]:
+              - /url: /internal-medicine
+          - listitem [ref=e130]:
+            - link "Diagnostics" [ref=e131] [cursor=pointer]:
+              - /url: /diagnostics
+          - listitem [ref=e132]:
+            - link "Veterinary Surgery" [ref=e133] [cursor=pointer]:
+              - /url: /veterinary-surgery
+          - listitem [ref=e134]:
+            - link "Dental Care" [ref=e135] [cursor=pointer]:
+              - /url: /dental-care
+          - listitem [ref=e136]:
+            - link "Palliative Care" [ref=e137] [cursor=pointer]:
+              - /url: /palliative-care
+          - listitem [ref=e138]:
+            - link "Emergency Care" [ref=e139] [cursor=pointer]:
+              - /url: /emergency-care
+          - listitem [ref=e140]:
+            - link "Pet Travel" [ref=e141] [cursor=pointer]:
+              - /url: /pet-travel
+          - listitem [ref=e142]:
+            - link "Telemedicine" [ref=e143] [cursor=pointer]:
+              - /url: /telemedicine
+      - iframe [ref=e146]:
+        - link "Open in Maps (opens in new tab)" [ref=f9e4] [cursor=pointer]:
+          - /url: about:invalid#zClosurez
+          - text: Open in Maps
+          - img [ref=f9e6]
+    - generic [ref=e148]:
+      - paragraph [ref=e149]: © 2026 Tustin Village Animal Hospital.
+      - generic [ref=e150]:
+        - link "Hospital policies" [ref=e151] [cursor=pointer]:
+          - /url: /hospital-policies
+        - link "Payment" [ref=e152] [cursor=pointer]:
+          - /url: /payment-options
+        - link "Contact" [ref=e153] [cursor=pointer]:
+          - /url: /contact-us

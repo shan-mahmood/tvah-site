@@ -11,11 +11,11 @@
   --color-brand-800: #1d4338;
   --color-brand-900: #102822;
 
-  /* Accent — warm clay for primary CTAs */
-  --color-accent-100: #f5e0d4;
-  --color-accent-500: #c87560;
-  --color-accent-600: #b85530;
-  --color-accent-800: #6b2f1a;
+  /* Accent — aliased to brand teal so the site is monochromatic teal-on-cream */
+  --color-accent-100: var(--color-brand-100);
+  --color-accent-500: var(--color-brand-500);
+  --color-accent-600: var(--color-brand-700);
+  --color-accent-800: var(--color-brand-800);
 
   /* Warm neutrals */
   --color-cream:   #faf7f2;

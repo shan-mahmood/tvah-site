@@ -37,7 +37,7 @@ const client = createClient({
 })
 
 const BOOKING_URL = 'https://tvill.usw2.ezyvet.com/external/portal/main/login?id=2'
-const PHONE_TEL = 'tel:7149091338'
+const PHONE_TEL = 'tel:7146607710'
 
 // ---- Image upload helpers ----
 async function uploadImage(url, filename) {
@@ -86,14 +86,62 @@ function findLocalImage(keyword) {
 
 const STOCK_PHOTOS = {
   hero: {
-    url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=2000&q=80&auto=format',
-    filename: 'hero-dog.jpg',
-    alt: 'Friendly golden retriever resting calmly',
+    url: 'https://images.unsplash.com/photo-1546377791-2e01b4449bf0?w=2000&q=80&auto=format',
+    filename: 'hero-cat-corgi.jpg',
+    alt: 'An orange tabby cat and a corgi cuddled together on warm brown bedding',
   },
   about: {
-    url: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=2000&q=80&auto=format',
-    filename: 'about-cat.jpg',
-    alt: 'Calm orange tabby cat being examined',
+    url: 'https://images.unsplash.com/photo-1509205477838-a534e43a849f?w=2000&q=80&auto=format',
+    filename: 'about-cat-dog.jpg',
+    alt: 'A small calico cat sitting beside a black-and-white dog outdoors, the cat looking up at the dog',
+  },
+}
+
+const SERVICE_HERO_PHOTOS = {
+  'service-wellness-exams': {
+    url: 'https://images.unsplash.com/photo-1774440865596-7b6e81f6ae2e?w=2000&q=80&auto=format',
+    filename: 'service-wellness.jpg',
+    alt: 'A beagle puppy held gently in caring hands during a checkup',
+  },
+  'service-internal-medicine': {
+    url: 'https://images.unsplash.com/photo-1535078839213-289087d2e09d?w=2000&q=80&auto=format',
+    filename: 'service-internal-medicine.jpg',
+    alt: 'A calm orange tabby cat being held in warm light by a person',
+  },
+  'service-veterinary-surgery': {
+    url: 'https://images.unsplash.com/photo-1759164955427-14ca448a839d?w=2000&q=80&auto=format',
+    filename: 'service-surgery.jpg',
+    alt: 'A gray cat wearing a recovery cone, resting on a wooden stool outdoors among plants',
+  },
+  'service-diagnostics': {
+    url: 'https://images.unsplash.com/photo-1610389199153-014d59881b1e?w=2000&q=80&auto=format',
+    filename: 'service-diagnostics.jpg',
+    alt: 'An attentive brown tabby cat with bright yellow eyes sitting in green grass',
+  },
+  'service-dental-care': {
+    url: 'https://images.unsplash.com/photo-1668158694703-ef328c78d3da?w=2000&q=80&auto=format',
+    filename: 'service-dental.jpg',
+    alt: "A long-haired brown and black dog in profile with its mouth open, showing healthy teeth",
+  },
+  'service-palliative-care': {
+    url: 'https://images.unsplash.com/photo-1584701313403-5da1c2ce8e0f?w=2000&q=80&auto=format',
+    filename: 'service-palliative.jpg',
+    alt: 'An older woman sitting at a window with her cocker spaniel, gently stroking the dog',
+  },
+  'service-pet-travel': {
+    url: 'https://images.unsplash.com/photo-1774790479490-dbf0f3a7fb60?w=2000&q=80&auto=format',
+    filename: 'service-pet-travel.jpg',
+    alt: 'A small Yorkshire terrier peeking out of a soft fabric sling carrier worn by an owner',
+  },
+  'service-emergency-care': {
+    url: 'https://images.unsplash.com/photo-1728013274420-ed02b1f58887?w=2000&q=80&auto=format',
+    filename: 'service-emergency.jpg',
+    alt: 'A small white kitten being gently held in two hands',
+  },
+  'service-telemedicine': {
+    url: 'https://images.unsplash.com/photo-1713764054243-ad6d1af5723d?w=2000&q=80&auto=format',
+    filename: 'service-telemedicine.jpg',
+    alt: 'A red-haired woman lying on a bed with her shiba inu, both looking at her phone',
   },
 }
 
@@ -408,18 +456,17 @@ async function buildHomeSections(heroImageId, aboutImageId) {
       _key: 'promo-1',
       _type: 'promoBanner',
       message: '50% off first exams on weekdays — new clients welcome.',
-      cta: { _type: 'cta', label: 'Book now', href: BOOKING_URL, openInNewTab: true },
+      cta: { _type: 'cta', label: 'Call (714) 660-7710', href: PHONE_TEL },
       tone: 'promo',
     },
     {
       _key: 'hero-1',
       _type: 'heroSection',
-      eyebrow: 'Trusted veterinarian in Tustin',
-      headline: 'Care for your pets like family.',
+      headline: 'Tustin Village Animal Hospital — Walk-Ins & Appointments',
       subheadline:
-        'Walk in anytime or schedule ahead for modern veterinary care. We see same-day walk-ins for routine, urgent, and emergency visits — six days a week.',
+        'No appointment needed. Walk in anytime or schedule ahead for modern veterinary care. HALF OFF First Exams on weekdays.',
       primaryCta: { _type: 'cta', label: 'Book an appointment', href: BOOKING_URL, openInNewTab: true },
-      secondaryCta: { _type: 'cta', label: 'Call (714) 909-1338', href: PHONE_TEL },
+      secondaryCta: { _type: 'cta', label: 'Call (714) 660-7710', href: PHONE_TEL },
       ...(heroImage && { backgroundImage: heroImage }),
     },
     {
@@ -465,7 +512,7 @@ async function buildHomeSections(heroImageId, aboutImageId) {
       heading: "Your pet's health is our priority.",
       description: 'Walk in, call, or book online. We see same-day appointments for routine and urgent care.',
       primaryCta: { _type: 'cta', label: 'Book an appointment', href: BOOKING_URL, openInNewTab: true },
-      secondaryCta: { _type: 'cta', label: 'Call (714) 909-1338', href: PHONE_TEL },
+      secondaryCta: { _type: 'cta', label: 'Call (714) 660-7710', href: PHONE_TEL },
     },
   ]
 }
@@ -480,7 +527,25 @@ function withExpectKeys(items) {
 async function seed() {
   console.log('\n🌱 Seeding TVAH content...\n')
 
+  console.log('  Uploading service hero photos...')
+  const serviceHeroAssets = {}
+  for (const [serviceId, photo] of Object.entries(SERVICE_HERO_PHOTOS)) {
+    const assetId = await uploadImage(photo.url, photo.filename)
+    if (assetId) {
+      serviceHeroAssets[serviceId] = { assetId, alt: photo.alt }
+      console.log(`  ✓ Hero uploaded for ${serviceId}`)
+    }
+  }
+
   for (const s of SERVICES) {
+    const heroAsset = serviceHeroAssets[s._id]
+    const heroImage = heroAsset
+      ? {
+          _type: 'image',
+          asset: { _type: 'reference', _ref: heroAsset.assetId },
+          alt: heroAsset.alt,
+        }
+      : undefined
     await client.createOrReplace({
       _id: s._id,
       _type: 'service',
@@ -491,8 +556,9 @@ async function seed() {
       whatToExpect: withExpectKeys(s.whatToExpect),
       faqs: withFaqKeys(s.faqs),
       order: s.order,
+      ...(heroImage && { heroImage }),
     })
-    console.log(`  ✓ Service: ${s.title}`)
+    console.log(`  ✓ Service: ${s.title}${heroImage ? ' (with hero)' : ''}`)
   }
 
   for (const d of DOCTORS) {

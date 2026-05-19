@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import Reveal from '@/components/ui/Reveal'
@@ -11,6 +12,16 @@ export const metadata: Metadata = {
   title: 'Our Services',
   description:
     'Wellness exams, internal medicine, surgery, dental, diagnostics, palliative care, pet travel, emergency care, and telemedicine for dogs and cats in Tustin.',
+  openGraph: {
+    images: [
+      {
+        url: '/images/services-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'A woman warmly hugging a brown and white spotted puppy outdoors',
+      },
+    ],
+  },
 }
 
 export const revalidate = 3600
@@ -38,6 +49,23 @@ export default async function ServicesPage() {
               in-house &mdash; with modern diagnostics, experienced doctors, and same-day walk-ins
               when you need them.
             </p>
+          </Reveal>
+        </Container>
+      </section>
+
+      <section className="pb-4">
+        <Container>
+          <Reveal>
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-[var(--color-surface)] md:aspect-[16/9]">
+              <Image
+                src="/images/services-hero.jpg"
+                alt="A woman gently hugging a brown and white spotted puppy outdoors in a garden"
+                fill
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                className="object-cover"
+                priority
+              />
+            </div>
           </Reveal>
         </Container>
       </section>
@@ -79,7 +107,7 @@ export default async function ServicesPage() {
                 your pet doesn&rsquo;t need.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href={bookingUrl} variant="primary" openInNewTab>
+                <Button href={bookingUrl} variant="onDark" openInNewTab>
                   Book an appointment
                 </Button>
                 {settings?.phone && (
