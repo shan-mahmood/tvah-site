@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:tustinvillageah.com)",
+      "Bash(node --env-file=.env.local scripts/seed.mjs)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3003/about-us)",
+      "Bash(curl -s http://localhost:3003/)",
+      "Bash(curl -s http://localhost:3003/our-doctors)",
+      "Bash(curl -s http://localhost:3003/wellness-exams)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3003/our-doctors)"
+    ]
+  }
+}

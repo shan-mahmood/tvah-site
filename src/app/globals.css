@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary — extracted from the TVAH logo */
+  --color-brand-50:  #f0f5f3;
+  --color-brand-100: #d4e6df;
+  --color-brand-200: #a3c9bc;
+  --color-brand-400: #588d7f;
+  --color-brand-500: #306956;
+  --color-brand-700: #234e40;
+  --color-brand-800: #1d4338;
+  --color-brand-900: #102822;
+
+  /* Accent — warm clay for primary CTAs */
+  --color-accent-100: #f5e0d4;
+  --color-accent-500: #c87560;
+  --color-accent-600: #b85530;
+  --color-accent-800: #6b2f1a;
+
+  /* Warm neutrals */
+  --color-cream:   #faf7f2;
+  --color-surface: #f3ede2;
+  --color-ink:     #1c2a25;
+  --color-muted:   #5a6c64;
+  --color-line:    #e2dcd0;
+
+  /* Status (semantic, brand-aligned) */
+  --color-success: #306956;
+  --color-warning: #d97f4a;
+  --color-danger:  #b94a3c;
+
+  /* Typography — Inter throughout, headlines distinguished by weight and tracking */
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+::selection { background: var(--color-brand-100); color: var(--color-brand-900); }
