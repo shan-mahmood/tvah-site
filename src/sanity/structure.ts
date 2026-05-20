@@ -19,6 +19,16 @@ export const structure = (S: StructureBuilder) =>
             .documentId('siteSettings')
             .title('Site settings')
         ),
+      S.listItem()
+        .title('Client feedback')
+        .id('feedback')
+        .child(
+          S.documentList()
+            .title('Client feedback')
+            .schemaType('feedback')
+            .filter('_type == "feedback"')
+            .defaultOrdering([{ field: 'submittedAt', direction: 'desc' }])
+        ),
       S.divider(),
       S.documentTypeListItem('service').title('Services'),
       S.documentTypeListItem('doctor').title('Doctors'),

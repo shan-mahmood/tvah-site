@@ -7,6 +7,7 @@ import {service} from './documents/service'
 import {doctor} from './documents/doctor'
 import {review} from './documents/review'
 import {siteSettings} from './documents/siteSettings'
+import feedback from './documents/feedback'
 
 import {heroSection} from './objects/sections/heroSection'
 import {promoBanner} from './objects/sections/promoBanner'
@@ -28,6 +29,7 @@ export const schemaTypes = [
   doctor,
   review,
   siteSettings,
+  feedback,
   // Section objects
   heroSection,
   promoBanner,
