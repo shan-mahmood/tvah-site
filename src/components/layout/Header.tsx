@@ -299,7 +299,7 @@ export default function Header({ settings }: { settings?: SiteSettings | null })
           rel="noopener noreferrer"
           className="hidden items-center rounded-full border border-[var(--color-brand-500)] px-5 py-2 text-xs font-medium uppercase tracking-widest text-[var(--color-brand-500)] transition-colors hover:bg-[var(--color-brand-500)] hover:text-white md:inline-flex"
         >
-          Appointment
+          Book now
         </a>
 
         <div className="flex items-center gap-2 md:hidden">
