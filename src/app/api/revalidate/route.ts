@@ -1,9 +1,10 @@
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
+import type { NextRequest } from 'next/server'
 import { parseBody } from 'next-sanity/webhook'
 
 type WebhookPayload = { _type?: string; slug?: { current?: string } }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const { body, isValidSignature } = await parseBody<WebhookPayload>(
       req,
