@@ -1,10 +1,9 @@
 /**
  * Single source of truth for visit fees.
  *
- * These figures are surfaced in three places — the site-wide PricingBanner,
- * the /walk-ins page, and /hospital-policies — and MUST stay identical across
- * all of them. Change a price here and every surface updates. Never retype the
- * numbers or labels inline; import from this module instead.
+ * These figures are surfaced on the /walk-ins page and /hospital-policies and
+ * MUST stay identical across both. Change a price here and every surface
+ * updates. Never retype the numbers or labels inline; import from this module.
  */
 
 export type Fee = {
