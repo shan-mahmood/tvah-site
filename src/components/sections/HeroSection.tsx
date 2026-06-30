@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import SanityImage from '@/components/ui/SanityImage'
@@ -30,6 +31,15 @@ export default function HeroSection(props: HeroSectionType) {
                 </p>
               </Reveal>
             )}
+            <Reveal delay={0.16}>
+              <Link
+                href="/walk-ins"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-500)] underline-offset-4 transition-colors hover:text-[var(--color-brand-700)] hover:underline focus-visible:underline focus-visible:outline-none"
+              >
+                No appointment needed — how walk-in visits work
+                <span aria-hidden>&rarr;</span>
+              </Link>
+            </Reveal>
             {(primaryCta?.href || secondaryCta?.href) && (
               <Reveal delay={0.2}>
                 <div className="mt-8 flex flex-wrap gap-3">

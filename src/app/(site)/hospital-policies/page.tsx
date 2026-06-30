@@ -7,6 +7,7 @@ import Button from '@/components/ui/Button'
 import { client } from '@/sanity/client'
 import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
+import { WALK_IN_EXAM, EMERGENCY_VISIT, formatPrice } from '@/lib/fees'
 
 export const metadata: Metadata = {
   title: 'Hospital Policies',
@@ -28,6 +29,8 @@ export const revalidate = 3600
 
 type Item = { heading: string; body: string }
 type Section = { title: string; intro?: string; items: Item[] }
+
+const WALK_IN_FEES = [WALK_IN_EXAM, EMERGENCY_VISIT]
 
 const SECTIONS: Section[] = [
   {
@@ -103,6 +106,44 @@ export default async function HospitalPoliciesPage() {
               </div>
             </Reveal>
           </div>
+        </Container>
+      </section>
+
+      <section className="bg-[var(--color-surface)] py-12 md:py-16">
+        <Container width="narrow">
+          <Reveal>
+            <h2 className="mb-6 text-3xl md:text-4xl">Walk-in visits</h2>
+            <p className="leading-relaxed text-[var(--color-ink)]/85">
+              Walk-ins are seen based on availability. Pets are seen in order of arrival, with
+              urgent and critical cases taken first, so wait times vary with how busy we are. If an
+              emergency comes in, it may be seen ahead of routine visits &mdash; which means your
+              pet is prioritized the same way if it&rsquo;s ever the urgent one.
+            </p>
+            <dl className="mt-8 space-y-4">
+              {WALK_IN_FEES.map((fee) => (
+                <div
+                  key={fee.label}
+                  className="flex items-baseline justify-between gap-4 border-b border-[var(--color-line)] pb-4"
+                >
+                  <dt className="text-lg text-[var(--color-ink)]">{fee.label}</dt>
+                  <dd className="text-lg font-semibold text-[var(--color-brand-700)]">
+                    {formatPrice(fee.price)}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-6 leading-relaxed text-[var(--color-muted)]">
+              These cover the visit and exam. Any diagnostics, treatment, or medication are billed
+              separately based on your pet&rsquo;s needs. For more, see our{' '}
+              <Link
+                href="/walk-ins"
+                className="font-medium text-[var(--color-brand-500)] underline underline-offset-2 hover:text-[var(--color-brand-700)]"
+              >
+                walk-in visits page
+              </Link>
+              .
+            </p>
+          </Reveal>
         </Container>
       </section>
 

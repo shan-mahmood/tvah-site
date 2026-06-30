@@ -9,6 +9,7 @@ const STATIC_PATHS = [
   '/about-us',
   '/our-doctors',
   '/our-services',
+  '/walk-ins',
   '/contact-us',
   '/payment-options',
   '/hospital-policies',

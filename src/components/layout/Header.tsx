@@ -14,6 +14,7 @@ type NavItem = {
 }
 
 const SERVICE_LINKS = [
+  { label: 'Walk-In Visits', href: '/walk-ins' },
   { label: 'Wellness Exams', href: '/wellness-exams' },
   { label: 'Internal Medicine', href: '/internal-medicine' },
   { label: 'Veterinary Surgery', href: '/veterinary-surgery' },

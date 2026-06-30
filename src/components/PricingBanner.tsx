@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { WALK_IN_EXAM, EMERGENCY_VISIT, formatPrice } from '@/lib/fees'
 
 /**
  * Bump this when fees change. Dismissal stores the version it dismissed, so
@@ -60,7 +61,8 @@ export default function PricingBanner() {
       <div className="relative mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-6 py-2 pr-12 text-center text-sm md:px-10 md:pr-14">
         <span>
           <span className="font-medium text-[var(--color-ink)]">Upfront pricing:</span>{' '}
-          Walk-in exams $150 &middot; ER visits $200
+          Walk-in exams {formatPrice(WALK_IN_EXAM.price)} &middot; ER visits{' '}
+          {formatPrice(EMERGENCY_VISIT.price)}
         </span>
         <Link
           href="/hospital-policies"
