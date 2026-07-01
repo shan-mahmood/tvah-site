@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
 import { CallRailRouteHandler } from '@/components/CallRailRouteHandler'
+import WalkInBanner from '@/components/WalkInBanner'
 import './globals.css'
 
 const inter = Inter({
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Suspense fallback={null}>
           <CallRailRouteHandler />
         </Suspense>
+        <WalkInBanner />
         {children}
       </body>
     </html>
