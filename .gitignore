@@ -9,3 +9,4 @@ schema.json
 sanity-types.ts
 .playwright-mcp/
 .claude/settings.local.json
+*.tsbuildinfo
