@@ -10,9 +10,9 @@ import type { ServiceSummary, SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/our-services' },
-  title: 'Our Services',
+  title: 'Veterinary Services in Tustin, CA',
   description:
-    'Wellness exams, internal medicine, surgery, dental, diagnostics, palliative care, pet travel, emergency care, and telemedicine for dogs and cats in Tustin.',
+    'Wellness exams, surgery, dental, diagnostics, internal medicine, and urgent care for dogs and cats in Tustin. Walk in or book online.',
   openGraph: {
     images: [
       {

@@ -10,7 +10,7 @@ import { WALK_IN_EXAM, EMERGENCY_VISIT, formatPrice } from '@/lib/fees'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/walk-ins' },
-  title: 'Walk-In Visits',
+  title: 'Walk-In Vet in Tustin, CA',
   description:
     'No appointment needed. Walk in during open hours and we’ll get your pet seen. Wait times vary with availability; walk-in and emergency fees listed upfront.',
 }
@@ -31,7 +31,7 @@ export default async function WalkInsPage() {
             <p className="text-xs font-medium tracking-widest text-[var(--color-brand-500)] uppercase">
               Patient center
             </p>
-            <h1 className="mt-3 text-4xl md:text-6xl">Walk-In Visits</h1>
+            <h1 className="mt-3 text-4xl md:text-6xl">Walk-In Vet Visits in Tustin</h1>
             <p className="mt-6 text-lg leading-relaxed text-[var(--color-muted)]">
               No appointment needed. Walk in during open hours and we&rsquo;ll get your pet seen.
             </p>
