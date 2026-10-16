@@ -14,6 +14,7 @@ type Doctor = DoctorSummary & {
 }
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/our-doctors' },
   title: 'Our Doctors',
   description:
     'Meet the veterinarians at Tustin Village Animal Hospital. Our doctor owned and operated practice brings decades of combined experience to every visit.',

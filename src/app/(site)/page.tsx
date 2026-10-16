@@ -17,9 +17,11 @@ export async function generateMetadata(): Promise<Metadata> {
     (s): s is HeroSection => s._type === 'heroSection'
   )
   const heroImage = hero?.backgroundImage as SanityImage | undefined
-  if (!heroImage?.asset) return {}
+  const alternates = { canonical: '/' }
+  if (!heroImage?.asset) return { alternates }
   const ogImageUrl = urlFor(heroImage).width(1200).height(630).fit('crop').url()
   return {
+    alternates,
     openGraph: {
       images: [
         {

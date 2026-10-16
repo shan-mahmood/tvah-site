@@ -14,13 +14,14 @@ import Link from 'next/link'
 
 type Service = {
   title: string
+  headline?: string
   shortDescription?: string
   heroImage?: any
   body?: any
   whatToExpect?: Array<{ heading: string; description: string }>
   faqs?: Array<{ question: string; answer: any }>
   relatedServices?: Array<{ _id: string; title: string; slug: string; shortDescription?: string }>
-  seo?: { title?: string; description?: string }
+  seo?: { title?: string; description?: string; noIndex?: boolean }
 }
 
 export const revalidate = 60
@@ -47,6 +48,8 @@ export async function generateMetadata({
   return {
     title: service.seo?.title || service.title,
     description: service.seo?.description || service.shortDescription,
+    alternates: { canonical: `/${slug}` },
+    ...(service.seo?.noIndex ? { robots: { index: false, follow: true } } : {}),
     openGraph: ogImageUrl
       ? {
           images: [{ url: ogImageUrl, width: 1200, height: 630, alt: ogAlt }],
@@ -75,7 +78,7 @@ export default async function ServicePage({
       <section className="pt-16 pb-12 md:pt-24 md:pb-20">
         <Container width="narrow">
           <Reveal>
-            <h1 className="text-4xl md:text-6xl">{service.title}</h1>
+            <h1 className="text-4xl md:text-6xl">{service.headline || service.title}</h1>
             {service.shortDescription && (
               <p className="mt-5 text-lg leading-relaxed text-[var(--color-muted)]">
                 {service.shortDescription}

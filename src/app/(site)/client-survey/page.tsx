@@ -6,6 +6,7 @@ import type { SiteSettings } from '@/lib/types'
 import SurveyForm from './SurveyForm'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/client-survey' },
   title: 'Share Your Experience',
   description: 'Tell us about your visit to Tustin Village Animal Hospital.',
   robots: { index: false, follow: false },

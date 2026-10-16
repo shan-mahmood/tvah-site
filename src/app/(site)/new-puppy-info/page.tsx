@@ -9,6 +9,7 @@ import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/new-puppy-info' },
   title: 'New Puppy Information',
   description:
     'Vaccination schedules, parasite prevention, diet, spay and neuter timing, and training guidance for new puppies.',

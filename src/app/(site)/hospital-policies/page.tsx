@@ -10,6 +10,7 @@ import type { SiteSettings } from '@/lib/types'
 import { WALK_IN_EXAM, EMERGENCY_VISIT, formatPrice } from '@/lib/fees'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/hospital-policies' },
   title: 'Hospital Policies',
   description:
     'Appointment, cancellation, drop-off, prescription, and abandoned animal policies at Tustin Village Animal Hospital.',

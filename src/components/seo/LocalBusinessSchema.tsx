@@ -1,4 +1,5 @@
 import type { SiteSettings } from '@/lib/types'
+import { SITE_URL, GEO, AREA_SERVED } from '@/lib/site'
 
 const DAY_MAP: Record<string, string> = {
   monday: 'Monday',
@@ -47,13 +48,27 @@ export default function LocalBusinessSchema({
       }
     : undefined
 
+  const sameAs = Array.from(
+    new Set(
+      [
+        settings.socials?.google,
+        settings.socials?.yelp,
+        settings.socials?.facebook,
+        settings.socials?.instagram,
+        reviews?.yelpUrl,
+      ].filter((u): u is string => typeof u === 'string' && /^https?:\/\//.test(u))
+    )
+  )
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'VeterinaryCare',
+    '@id': `${SITE_URL}/#clinic`,
     name: settings.businessName,
+    url: SITE_URL,
+    image: `${SITE_URL}/team-photo.jpg`,
     telephone: settings.phone,
-    email: settings.email,
-    url: process.env.NEXT_PUBLIC_SITE_URL,
+    email: settings.email || undefined,
     address: settings.address
       ? {
           '@type': 'PostalAddress',
@@ -64,11 +79,16 @@ export default function LocalBusinessSchema({
           addressCountry: 'US',
         }
       : undefined,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: GEO.latitude,
+      longitude: GEO.longitude,
+    },
+    hasMap: settings.socials?.google || settings.address?.mapUrl || undefined,
+    areaServed: AREA_SERVED.map((name) => ({ '@type': 'City', name })),
     openingHoursSpecification: openingHours,
     aggregateRating,
-    sameAs: settings.socials
-      ? Object.values(settings.socials).filter(Boolean)
-      : undefined,
+    sameAs: sameAs.length ? sameAs : undefined,
   }
 
   return (

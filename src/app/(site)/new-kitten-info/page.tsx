@@ -9,6 +9,7 @@ import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/new-kitten-info' },
   title: 'New Kitten Information',
   description:
     'Vaccinations, parasite prevention, diet, and spay/neuter guidance for new kittens at Tustin Village Animal Hospital.',

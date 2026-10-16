@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { client } from '@/sanity/client'
 import { allServiceSlugsQuery } from '@/sanity/queries'
-
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tustinvillageah.com'
+import { SITE_URL as SITE } from '@/lib/site'
 
 const STATIC_PATHS = [
   '/',
@@ -11,6 +10,7 @@ const STATIC_PATHS = [
   '/our-services',
   '/walk-ins',
   '/contact-us',
+  '/patient-center',
   '/payment-options',
   '/hospital-policies',
   '/new-puppy-info',

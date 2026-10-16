@@ -9,6 +9,7 @@ import type { SiteSettings } from '@/lib/types'
 import { WALK_IN_EXAM, EMERGENCY_VISIT, formatPrice } from '@/lib/fees'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/walk-ins' },
   title: 'Walk-In Visits',
   description:
     'No appointment needed. Walk in during open hours and we’ll get your pet seen. Wait times vary with availability; walk-in and emergency fees listed upfront.',

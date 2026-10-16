@@ -9,6 +9,7 @@ import { allServicesQuery, siteSettingsQuery } from '@/sanity/queries'
 import type { ServiceSummary, SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/our-services' },
   title: 'Our Services',
   description:
     'Wellness exams, internal medicine, surgery, dental, diagnostics, palliative care, pet travel, emergency care, and telemedicine for dogs and cats in Tustin.',

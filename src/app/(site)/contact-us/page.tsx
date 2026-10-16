@@ -7,6 +7,7 @@ import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact-us' },
   title: 'Contact Us',
   description:
     'Visit Tustin Village Animal Hospital at 13942 Newport Ave, Tustin, CA 92780. Call (714) 660-7710 or book online for same-day appointments.',

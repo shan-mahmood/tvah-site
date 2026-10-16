@@ -9,6 +9,7 @@ import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/payment-options' },
   title: 'Payment Information',
   description:
     'Accepted payment methods, pet insurance options, and CareCredit financing at Tustin Village Animal Hospital.',

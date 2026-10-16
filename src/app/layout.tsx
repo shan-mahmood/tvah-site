@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Suspense } from 'react'
 import { CallRailRouteHandler } from '@/components/CallRailRouteHandler'
 import WalkInBanner from '@/components/WalkInBanner'
+import { SITE_URL } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({
@@ -13,7 +14,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tustinvillageah.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Veterinarian in Tustin | Tustin Village Animal Hospital',
     template: '%s | Tustin Village Animal Hospital',

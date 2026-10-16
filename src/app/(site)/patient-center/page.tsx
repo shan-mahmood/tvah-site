@@ -9,6 +9,7 @@ import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/patient-center' },
   title: 'Patient Center',
   description:
     'New client information, forms, payment options, hospital policies, and puppy/kitten care guides for Tustin Village Animal Hospital.',

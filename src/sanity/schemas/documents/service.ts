@@ -11,6 +11,14 @@ export const service = defineType({
       validation: (r) => r.required(),
     }),
     defineField({
+      name: 'headline',
+      title: 'Page headline (H1)',
+      type: 'string',
+      description:
+        'Optional. The big heading at the top of the page. Leave blank to use the title. Include the city, e.g. "Pet Dental Care in Tustin".',
+      validation: (r) => r.max(70),
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       description:

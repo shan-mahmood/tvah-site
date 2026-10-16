@@ -8,6 +8,7 @@ import { siteSettingsQuery } from '@/sanity/queries'
 import type { SiteSettings } from '@/lib/types'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about-us' },
   title: 'About Us',
   description:
     'Walk-in veterinary care in Tustin, serving Orange County families. Doctor owned and operated, with modern medicine, individualized care, and a focus on quality of life.',
