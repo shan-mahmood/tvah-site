@@ -27,6 +27,7 @@ const VISIT_LINKS = [
   { label: 'New Puppy Info', href: '/new-puppy-info' },
   { label: 'New Kitten Info', href: '/new-kitten-info' },
   { label: 'Hospital Policies', href: '/hospital-policies' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Payment Information', href: '/payment-options' },
   { label: 'Contact Us', href: '/contact-us' },
 ]
@@ -183,6 +184,7 @@ export default function Footer({ settings }: { settings?: SiteSettings | null })
           <p>© {new Date().getFullYear()} Tustin Village Animal Hospital.</p>
           <div className="flex gap-6">
             <Link href="/hospital-policies">Hospital policies</Link>
+            <Link href="/privacy-policy">Privacy</Link>
             <Link href="/payment-options">Payment</Link>
             <Link href="/contact-us">Contact</Link>
           </div>

@@ -13,6 +13,7 @@ const STATIC_PATHS = [
   '/patient-center',
   '/payment-options',
   '/hospital-policies',
+  '/privacy-policy',
   '/new-puppy-info',
   '/new-kitten-info',
 ]
